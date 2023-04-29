@@ -64,5 +64,10 @@ Delete your self-signed Certificate, this will untrust any Certificate generated
 As you will see in the Program.cs class, the Development appsettings.json use the In Memory database for running, and that requires no migrations.
 
 In case you get to the point of using a database, you will need to generate the migrations. Steps for that can be found below:
+(I already ran these steps on this repo so you can check the generated code beforehand, but you can delete the Migrations folder and start again)
 
-- 
+- Setup the database connection string in the appsettings file where your VS is pointing, in my case, I updated the appsettings.Development.json file
+- Run the following command in the Package Manager Console **Add-Migration InitialCreate**
+- That command will create your Migrations folder and your InitialCreate migration, check the results
+- To update the database set in the connection string, run **Update-Database** in the Package Manager Console, and you should get all the modifications done as the output in the console
+
