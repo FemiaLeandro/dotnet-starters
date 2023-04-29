@@ -1,0 +1,9 @@
+// Azure related configurations in case you want to use Connected Services feature (https://devblogs.microsoft.com/dotnet/configuring-azure-services-and-emulators-using-visual-studio/)
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:SqlLocalDbConnection"
+    }
+  }
+}
