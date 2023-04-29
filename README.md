@@ -5,7 +5,7 @@ This starter project should eliminate (or at least reduce to a minimum) the whol
 Features:
 - Individual accounts authentication using .NET handlers for fast and safe customizable auth without the need of external service providers (also an option if you need!)
 - Unscaffolded Identity pages to customize whatever you need (also, Bootstrap and jQuery installed by default on ASP.NET projects)
-- Localization support (TODO)
+- Localization support and example in Login page
 - In memory database support for fast local tests or demos
 - Docker and HTTPS support (debugging included, with custom self signed SSL certificate creation for local development)
 - LocaLDB MS SQL support for Development deployments or standard MSSQL connections

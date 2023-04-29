@@ -1,7 +1,10 @@
 using System;
+using System.Globalization;
 using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -53,7 +56,14 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     }
 }).AddEntityFrameworkStores<WebAppDbContext>();
 
-builder.Services.AddRazorPages();
+builder.Services.AddLocalization(options =>
+{
+    options.ResourcesPath = "Resources";
+});
+
+builder.Services.AddRazorPages()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
 
 var app = builder.Build();
 
@@ -78,5 +88,21 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+var supportedCultures = new[]
+{
+     new CultureInfo("en"),
+     new CultureInfo("es")
+};
+
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    // Set the default culture.
+    DefaultRequestCulture = new RequestCulture("en"),
+    // Formatting numbers, dates, etc.
+    SupportedCultures = supportedCultures,
+    // UI strings that we have localized.
+    SupportedUICultures = supportedCultures
+});
 
 app.Run();
