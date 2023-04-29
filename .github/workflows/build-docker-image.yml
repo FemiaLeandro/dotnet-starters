@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file src\web-app-with-authentication\Dockerfile.buildPublish --label buildPublishResult:${{ github.run_id }}-${{ github.run_attempt }} --progress=plain --no-cache
+      run: docker build . --file src\web-app-with-authentication\Dockerfile.buildPublish --label buildPublishResult:${{ github.run_id }}-${{ github.run_attempt }}
