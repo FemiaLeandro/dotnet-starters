@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Templates.DockerWebAppWithAuth": {
+    "Kestrel": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

@@ -3,10 +3,10 @@
 
 # Using hard-specified versions is recommended to make sure no errors arise when different images are published to the repository
 # These are the latest at the day of the creation/update of this starter
-FROM mcr.microsoft.com/dotnet/aspnet:6.0.16 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+#FROM mcr.microsoft.com/dotnet/aspnet:6.0.16 AS base
+#WORKDIR /app
+#EXPOSE 80
+#EXPOSE 443
 
 # Using hard-specified versions is recommended to make sure no errors arise when different images are published to the repository
 # These are the latest at the day of the creation/update of this starter
@@ -21,8 +21,9 @@ RUN dotnet build "Templates.DockerWebAppWithAuth.csproj" -c Release -o /app/buil
 
 FROM build AS publish
 RUN dotnet publish "Templates.DockerWebAppWithAuth.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN ls
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Templates.DockerWebAppWithAuth.dll"]
+#FROM base AS final
+#WORKDIR /app
+#COPY --from=publish /app/publish .
+#RUN ls

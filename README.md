@@ -1,15 +1,25 @@
-# .NET 6 Razor Web Pages starter
+## .NET 6 Blazor starter
+- TODO
+
+## .NET 6 Razor Web Pages starter
+
+### Ideas to improve starter
+- docker-compose with SQL Server connection and nginx reverse proxy for Release mode
+- Specify custom port where container will run
+- GitHub Actions or any automation to make sure containers build
+
+### Description
 
 This starter project should eliminate (or at least reduce to a minimum) the whole setup phase for the solution, and also adds the possibility to remove or customize whatever you need as the code is thoroughly commented, explaning each part of the configuration to the best of my ability.
 
 Features:
 - Individual accounts authentication using .NET handlers for fast and safe customizable auth without the need of external service providers (also an option if you need!)
-- Unscaffolded Identity pages to customize whatever you need (also, Bootstrap and jQuery installed by default on ASP.NET projects)
-- Localization support and example in Login page
+- Unscaffolded Identity pages to customize whatever you need (also, Bootstrap and jQuery installed by default on the project, you can update and use them or replace with libraries of your choice)
+- Localization support and example on how to use in 'Login' page
 - In memory database support for fast local tests or demos
 - Docker and HTTPS support (debugging included, with custom self signed SSL certificate creation for local development)
 - LocaLDB MS SQL support for Development deployments or standard MSSQL connections
-- Entity Framework code-first approach with in-code migrations (no out-of-control database changes :D)
+- Entity Framework code-first approach with in-code migrations and example (no out-of-control database changes :D)
 
 I hope this helps anyone in need of something similar for a quick project setup
 

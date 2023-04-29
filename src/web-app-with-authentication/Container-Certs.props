@@ -1,6 +1,6 @@
 <Project>
 
-  <!-- If Create-Certs has been run, use the generated certs -->
+  <!-- If Create-Certs.ps1 has been run, use the generated certs by mounting the Certs directory as a volume to the Dockerfile -->
   <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)\ContainerCerts.env')">
     <DockerfileFastModeStage>testCerts</DockerfileFastModeStage>
     <DockerfileRunEnvironmentFiles>$(MSBuildProjectDirectory)\ContainerCerts.env</DockerfileRunEnvironmentFiles>

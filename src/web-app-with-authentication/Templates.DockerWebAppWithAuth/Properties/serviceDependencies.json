@@ -3,7 +3,7 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:SqlLocalDbConnection"
+      "connectionId": "ConnectionStrings:DefaultConnection"
     }
   }
 }
