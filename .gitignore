@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+####################################################################
+
+# Do not commit your locally generated certs!
+*.cer
+*.csr
+*.pem
+Password.txt
+*.srl
+*.crt
+ContainerCerts.env

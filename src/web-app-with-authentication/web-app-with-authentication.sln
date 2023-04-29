@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates.DockerWebAppWithAuth", "Templates.DockerWebAppWithAuth\Templates.DockerWebAppWithAuth.csproj", "{C9E0F7FB-B32A-47B8-9DA1-5F42C3CB02FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Templates.DockerWebAppWithAuth", "Templates.DockerWebAppWithAuth\Templates.DockerWebAppWithAuth.csproj", "{C9E0F7FB-B32A-47B8-9DA1-5F42C3CB02FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certs", "Certs", "{5BF1EBF9-4E47-4B70-A607-ED90DB0607E7}"
+	ProjectSection(SolutionItems) = preProject
+		Certs\backend.cnf = Certs\backend.cnf
+		Certs\Clean-Certs.ps1 = Certs\Clean-Certs.ps1
+		Certs\ContainerCerts.env.template = Certs\ContainerCerts.env.template
+		Certs\Create-Certs.ps1 = Certs\Create-Certs.ps1
+		Certs\CreateCerts.sh = Certs\CreateCerts.sh
+		Certs\test-ca.cnf = Certs\test-ca.cnf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A48B0FA9-44F9-4363-89FC-E3F406D3DE60}"
+	ProjectSection(SolutionItems) = preProject
+		Container-Certs.props = Container-Certs.props
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
